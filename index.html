@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="X-Frame-Options" content="ALLOWALL">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors *">
   <title>What is Your TCK Struggle & Strength?</title>
 <style>
 :root {
@@ -14,9 +16,8 @@
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
     Arial;
-  background: linear-gradient(180deg, #f1f1f1, #fff);
-  color: #111;
-  padding: 24px;
+  background: transparent;
+  padding: 8px;
 }
 .quiz-wrap {
   max-width: 820px;
@@ -408,14 +409,14 @@ const questions = [
     ]
   },
   {
-    text: 'What frustrates you about "home"?',
+    text: 'What does “home” mean to you?',
     options: [
-      { text: "Most people haven’t experienced as much as I have.", weights: A },
-      { text: "I don’t feel truly at home anywhere.", weights: B },
-      { text: "It keeps changing, so I’m not sure where it is.", weights: C },
-      { text: "I miss the places and people I’ve lost.", weights: D },
-      { text: "I’m not sure if I even have a “real” home.", weights: E },
-      { text: "I feel disconnected no matter where I go.", weights: F }
+      { text: "A place where people can finally understand me.", weights: A },
+      { text: "A place where I truly fit in and don’t feel like an outsider.", weights: B },
+      { text: "A temporary stop — it always shifts with the next move.", weights: C },
+      { text: "A place I’ve already lost or can’t get back to.", weights: D },
+      { text: 'A question I still can’t answer — I don’t know what “home” is for me.', weights: E },
+      { text: "Wherever the people I love most are.", weights: F }
     ]
   },
   {
